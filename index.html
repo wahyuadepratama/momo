@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title>Momo Magic</title>
+		<link rel="icon" href="img/small-logo.gif">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+		<style rel="stylesheet" media="screen">
+			.table td{
+				border-top-color: white;
+			}
+			.footer{
+			  background-color: black;
+			  height: 100%;
+			  bottom:0;
+			  color: white;
+			  padding: 30px;
+				text-align: center;
+			}
+		</style>
+	</head>
+	<body>
+
+	<nav class="navbar sticky-top navbar-light bg-light">
+	  <div class="container">
+	  	<a class="navbar-brand" href="#"><img src="img/small-logo.gif" height="30%" width="30%"> Momo Magic</a>
+	  </div>
+	</nav>
+
+	<div class="card text-center" style="margin-top:2%;">
+	  <div class="card-header"></div>
+	  <div class="card-body" style="margin:2%;">
+	    <h2 class="card-title" >Selamat Datang di Rumah Momo</h2>
+	    <p class="card-text">
+				Tanyakan apa saja kepada <strong><i>Momo sang Magician</i></strong> dan dia akan membuat kamu terkagum. <br>
+				Jangan lupa memasukan petisi setiap kali kamu ingin momo menjawab pertanyaanmu.<br>
+				Gunakan petisi <i>"Momo, mohon bantuannya menjawab pertanyaan ini"</i>.
+			</p>
+	    <a href="#" class="btn btn-primary">Mulai</a>
+	  </div>
+	  <div class="card-footer text-muted"></div>
+	</div>
+
+	<div id="content" class="container">
+		<div class="row" style="margin:2%;">
+
+			<div class="col-md-9" style="margin-top:1%;">
+				<div class="card">
+				  <div class="card-header">
+				    Silahkan tanyakan apa saja kepada momo!
+				  </div>
+				  <div class="card-body" id="divPlayAreaExt">
+						<div id="divLicense" style="display:none"></div>
+						<div class="form-group" id="divPlayArea">
+							<table class="table no-border">
+								<tr>
+									<div id="petition">
+									<td><label>Petisi</label></td>
+									<td><input id="txtpetition" type="text" onkeypress="return O00OOOO(event, this)" onkeydown="O00OOO0(event)" onpaste="return false;" oncontextmenu="return false;" class="form-control"></td>
+									<td><input id="btnClear" type="button" value="Clear" onclick="reset()" class="btn btn-danger"></input></td>
+									</div>
+								</tr>
+								<tr>
+									<div id="question">
+									<td><label>Pertanyaan</label></td>
+									<td><input id="txtquestion" type="text" onkeypress="return O0O0000(event, this)" onkeydown="O000OOO(event)" onpaste="return false;" oncontextmenu="return false;" class="form-control"></td>
+									<td><input id="btnAsk" type="button" value="OK" onclick="submitThis()" class=" btn btn-danger"></td>
+									</div>
+								</tr>
+							</table>
+						</div>
+
+						<div class="row" style="margin:2%;">
+							<p id="output"></p>
+						</div>
+						<div class="row" style="margin:2%;">
+							<input id="btnNew" type="button" value="New Question" onclick="reset()" class="btn btn-danger" style="visibility:hidden"/>
+						</div>
+
+				  </div>
+				</div>
+			</div>
+
+			<div class="col-md-3" style="margin-top:1%;">
+				<div class="card">
+				  <div class="card-header">
+				    Jawaban Momo
+				  </div>
+				  <div class="card-body">
+
+						<div class="card border-danger mb-3" style="max-width: 18rem;">
+						  <div class="card-body text-danger">
+						    <img src="img/cool.gif" alt="" width="100%" height="100%" id="cool" style="visibility:hidden">
+						  </div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+	<div class="footer">
+		<div class="container">
+		<small>Copyright &copy; HMSI Unand 2018</small>
+		</div>
+	</div>
+
+<script type="text/javascript">
+/*Labels */
+var O000000 = "EN";
+var mask = "Momo, mohon bantuannya menjawab pertanyaan ini:";
+var O000O00 = "<img alt=\"Loading\" src=\"img/loading.gif\" style=\"border:0; width:70%;\" />";
+var O000O0O = "No connection.";
+var error_pet = "Kamu harus memohon bantuan momo terlebih dahulu, masukan petisi dengan benar";
+var O0O0OO0 = "Kamu harus memasukan pertanyaan dengan benar";
+var O000OO0 = "<img alt=\"Loading\" src=\"img/loading.gif\" style=\"border:0; vertical-align:bottom; margin-top:80px;\" /><p style=\"color:#BAA384\">Loading...</p>";
+;
+</script>
+
+		<script type="text/javascript" src="momo.js"></script>
+	</body>
+</html>
